@@ -1,0 +1,19 @@
+{
+  "HOME": ".fa-home",
+  "Learn HTML": "Learn HTML",
+  "Language Codes": "//a[contains(text(),'Language Codes')]",
+  "Color Names": "Color Names",
+  "DeepPink": "DeepPink",
+  "Learn Icons": "Learn Icons",
+  "Icons Animals": "//a[contains(text(),'Icons Animals')]",
+  "Icons Business": "Icons Business",
+  "Flows": {
+    "Learn HTML": "HOME->Learn HTML",
+    "Language Codes": "HOME->Learn HTML->Language Codes",
+    "Color Names": "HOME->Learn HTML->Color Names",
+    "DeepPink": "HOME->Learn HTML->Color Names->DeepPink",
+    "Learn Icons": "HOME->Learn Icons",
+    "Icons Animals": "HOME->Learn Icons->Icons Animals",
+    "Icons Business": "HOME->Learn Icons->Icons Business"
+  }
+}

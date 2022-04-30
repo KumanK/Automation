@@ -1,0 +1,3 @@
+name,age,comments,optional,mendatory
+Kuman,32,needs weight loss,33,True
+Avani,31,needs weight 2 loss,,False
