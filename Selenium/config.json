@@ -1,0 +1,12 @@
+{
+  "Home": {"id": "mfsLauncher"},
+  "System Tree": {
+    "id": "PoliciesAndTasks_page",
+    "Systems": {
+      "id": "otsID_Tabs.SYSTEMS",
+      "Preset": "computerTable_filterList",
+      "Custom": "computerTable_advancedFilter"
+    }
+  },
+  "Server Task Log": {"id": "orion.tasklog_page"}
+}

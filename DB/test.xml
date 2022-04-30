@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <SoftwareId>EPOAGENT3000</SoftwareId>
+    <ProductName>McAfee Agent</ProductName>
+    <Version>5.6.5.999</Version>
+    <Language>0409</Language>
+    <InstallPath>/opt/McAfee/agent</InstallPath>
+    <RuntimeSdkPath64>/opt/McAfee/agent/lib/lib64/rsdk</RuntimeSdkPath64>
+    <ToolsPath64>/opt/McAfee/agent/lib/lib64/tools</ToolsPath64>
+    <RuntimeSdkPath>/opt/McAfee/agent/lib/rsdk</RuntimeSdkPath>
+    <ToolsPath>/opt/McAfee/agent/lib/tools</ToolsPath>
+    <DataPath>/var/McAfee/agent</DataPath>
+    <StartCommand>/etc/init.d/ma start</StartCommand>
+    <StopCommand>/etc/init.d/ma stop</StopCommand>
+    <UninstallCommand>/opt/McAfee/agent/scripts/uninstall.sh</UninstallCommand>
+    <InstallTime>__CURRENT_TIME__</InstallTime>
+    <DebugScript>1</DebugScript>
+    <UpdaterDataDir>/var/McAfee/agent/update</UpdaterDataDir>
+    <SharedLibLocation>/opt/McAfee/shared/5.0.0/lib</SharedLibLocation>
+    <crypto_mode>2</crypto_mode>
+    <crypto_keysize>0</crypto_keysize>
+    <LogFilePattern>*.log</LogFilePattern>
+    <LogFilesPath>/var/McAfee/agent/logs</LogFilesPath>
+    <binsphash/>
+</Configuration>

@@ -1,0 +1,4 @@
+status,fsType,whitelisted
+1,ext4,Yes
+0,ext3,Yes
+1,ext2,No
