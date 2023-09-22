@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvFileAttributes">
+    <option name="attributeMap">
+      <map>
+        <entry key="C:\Users\Administrator\intsdn01.1\ETAF\projects\modbus_e2e_testing\modbus_slave\config\opcua_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Users\Administrator\intsdn01.1\ETAF\projects\modbus_functional\modbus_slave\modbus_slave\scripts\data_files\LABJACK.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Users\Administrator\intsdn01.1\ETAF\projects\opcua_e2e_testing\modbus_slave\config\opcua_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
