@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.5 on win32)" generated="20230922 12:46:12.086" rpa="true" schemaversion="3">
+<suite id="s1" name="Eaton" source="C:\Users\Administrator\PycharmProjects\WindowsAutomation\venv\Eaton.robot">
+<test id="s1-t1" name="Open Eaton desktop application and login" line="14">
+<kw name="Open the Eaton desktop application">
+<kw name="Get Key From Config" library="json_parser">
+<var>${path}</var>
+<arg>${EATON_CONFIG_FILE}</arg>
+<arg>executable_path</arg>
+<msg timestamp="20230922 12:46:13.028" level="INFO">${path} = C:\Users\Administrator\Downloads\Suite V_1.0.3\Suite V_1.0.3\eaton_V1.0.3.exe</msg>
+<status status="PASS" starttime="20230922 12:46:13.026" endtime="20230922 12:46:13.028"/>
+</kw>
+<kw name="Windows Run" library="RPA.Windows">
+<arg>${path}</arg>
+<tag>window</tag>
+<doc>Use Windows Run window to launch an application.</doc>
+<msg timestamp="20230922 12:46:13.028" level="INFO">Sending keys '{Win}r' to element: &lt;module 'uiautomation' from 'C:\\Users\\Administrator\\PycharmProjects\\WindowsAutomation\\venv\\Lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<msg timestamp="20230922 12:46:13.572" level="INFO">Sending keys 'C:\\Users\\Administrator\\Downloads\\Suite V_1.0.3\\Suite V_1.0.3\\eaton_V1.0.3.exe' to element: &lt;module 'uiautomation' from 'C:\\Users\\Administrator\\PycharmProjects\\WindowsAutomation\\venv\\Lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<msg timestamp="20230922 12:46:14.948" level="INFO">Sending keys '{Enter}' to element: &lt;module 'uiautomation' from 'C:\\Users\\Administrator\\PycharmProjects\\WindowsAutomation\\venv\\Lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<status status="PASS" starttime="20230922 12:46:13.028" endtime="20230922 12:46:18.471"/>
+</kw>
+<kw name="Control Window" library="RPA.Windows">
+<arg>name:"Manufacturing Suite"</arg>
+<tag>window</tag>
+<doc>Controls the window defined by the locator.</doc>
+<msg timestamp="20230922 12:46:18.491" level="INFO">Getting element with locator: name:"Manufacturing Suite" and type:WindowControl</msg>
+<msg timestamp="20230922 12:46:18.491" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x000001F604561090&gt;, locator='name:"Manufacturing Suite" and type:WindowControl', name='Desktop 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg timestamp="20230922 12:46:18.491" level="INFO">Locator 'name:"Manufacturing Suite" and type:WindowControl' produced matcher: MatchObject(locators=[('Name', 'Manufacturing Suite', 0), ('ControlType', 'WindowControl', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230922 12:46:19.510" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000001F67F8003D0&gt;, locator='name:"Manufacturing Suite" and type:WindowControl', name='Manufacturing Suite', automation_id='', control_type='WindowControl', class_name='Login', left=251, right=1681, top=45, bottom=1069, width=1430, height=1024, xcenter=966, ycenter=557)</msg>
+<status status="PASS" starttime="20230922 12:46:18.471" endtime="20230922 12:46:20.011"/>
+</kw>
+<kw name="Get Key From Config" library="json_parser">
+<var>${email}</var>
+<arg>${EATON_CONFIG_FILE}</arg>
+<arg>email</arg>
+<msg timestamp="20230922 12:46:20.014" level="INFO">${email} = claritamary@eaton.com</msg>
+<status status="PASS" starttime="20230922 12:46:20.012" endtime="20230922 12:46:20.014"/>
+</kw>
+<kw name="Send Keys" library="RPA.Desktop.Windows">
+<arg>${email}</arg>
+<doc>Send keys into active windows.</doc>
+<status status="PASS" starttime="20230922 12:46:20.014" endtime="20230922 12:46:21.081"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>tab</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20230922 12:46:21.082" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20230922 12:46:21.081" endtime="20230922 12:46:21.083"/>
+</kw>
+<kw name="Get Key From Config" library="json_parser">
+<var>${password}</var>
+<arg>${EATON_CONFIG_FILE}</arg>
+<arg>password</arg>
+<msg timestamp="20230922 12:46:21.085" level="INFO">${password} = Happy@123456789</msg>
+<status status="PASS" starttime="20230922 12:46:21.084" endtime="20230922 12:46:21.085"/>
+</kw>
+<kw name="Send Keys" library="RPA.Desktop.Windows">
+<arg>${password}</arg>
+<doc>Send keys into active windows.</doc>
+<status status="PASS" starttime="20230922 12:46:21.086" endtime="20230922 12:46:21.848"/>
+</kw>
+<kw name="Click" library="RPA.Windows">
+<arg>name:"Login"</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<msg timestamp="20230922 12:46:21.850" level="INFO">Getting element with locator: name:"Login"</msg>
+<msg timestamp="20230922 12:46:21.852" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000001F67F8003D0&gt;, locator='name:"Manufacturing Suite" and type:WindowControl', name='Manufacturing Suite', automation_id='', control_type='WindowControl', class_name='Login', left=251, right=1681, top=45, bottom=1069, width=1430, height=1024, xcenter=966, ycenter=557)</msg>
+<msg timestamp="20230922 12:46:21.852" level="INFO">Locator 'name:"Login"' produced matcher: MatchObject(locators=[('Name', 'Login', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230922 12:46:21.906" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.ButtonControl object at 0x000001F604573650&gt;, locator='name:"Login"', name='Login', automation_id='', control_type='ButtonControl', class_name='QPushButton', left=1252, right=1372, top=671, bottom=711, width=120, height=40, xcenter=1312, ycenter=691)</msg>
+<status status="PASS" starttime="20230922 12:46:21.849" endtime="20230922 12:46:22.466"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230922 12:46:25.467" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230922 12:46:22.466" endtime="20230922 12:46:25.467"/>
+</kw>
+<status status="PASS" starttime="20230922 12:46:13.026" endtime="20230922 12:46:25.467"/>
+</kw>
+<kw name="Make controller connection">
+<kw name="Control Window" library="RPA.Windows">
+<arg>name:"Manufacturing Suite"</arg>
+<tag>window</tag>
+<doc>Controls the window defined by the locator.</doc>
+<msg timestamp="20230922 12:46:25.472" level="INFO">Getting element with locator: name:"Manufacturing Suite" and type:WindowControl</msg>
+<msg timestamp="20230922 12:46:25.472" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x000001F6045805D0&gt;, locator='name:"Manufacturing Suite" and type:WindowControl', name='Desktop 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg timestamp="20230922 12:46:25.472" level="INFO">Locator 'name:"Manufacturing Suite" and type:WindowControl' produced matcher: MatchObject(locators=[('Name', 'Manufacturing Suite', 0), ('ControlType', 'WindowControl', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230922 12:46:26.636" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000001F604580C10&gt;, locator='name:"Manufacturing Suite" and type:WindowControl', name='Manufacturing Suite', automation_id='', control_type='WindowControl', class_name='CONNECT', left=251, right=1681, top=45, bottom=1068, width=1430, height=1023, xcenter=966, ycenter=556)</msg>
+<status status="PASS" starttime="20230922 12:46:25.469" endtime="20230922 12:46:27.139"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>tab</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20230922 12:46:27.140" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20230922 12:46:27.139" endtime="20230922 12:46:27.141"/>
+</kw>
+<kw name="Get Key From Config" library="json_parser">
+<var>${create_user_email}</var>
+<arg>${EATON_CONFIG_FILE}</arg>
+<arg>create_user_email</arg>
+<msg timestamp="20230922 12:46:27.143" level="INFO">${create_user_email} = admin</msg>
+<status status="PASS" starttime="20230922 12:46:27.142" endtime="20230922 12:46:27.143"/>
+</kw>
+<kw name="Send Keys" library="RPA.Desktop.Windows">
+<arg>${create_user_email}</arg>
+<doc>Send keys into active windows.</doc>
+<status status="PASS" starttime="20230922 12:46:27.144" endtime="20230922 12:46:27.400"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>tab</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20230922 12:46:27.401" level="INFO">Pressing keys: Key.tab</msg>
+<status status="PASS" starttime="20230922 12:46:27.400" endtime="20230922 12:46:27.402"/>
+</kw>
+<kw name="Get Key From Config" library="json_parser">
+<var>${create_user_password}</var>
+<arg>${EATON_CONFIG_FILE}</arg>
+<arg>create_user_password</arg>
+<msg timestamp="20230922 12:46:27.403" level="INFO">${create_user_password} = Admin*1</msg>
+<status status="PASS" starttime="20230922 12:46:27.402" endtime="20230922 12:46:27.403"/>
+</kw>
+<kw name="Send Keys" library="RPA.Desktop.Windows">
+<arg>${create_user_password}</arg>
+<doc>Send keys into active windows.</doc>
+<status status="PASS" starttime="20230922 12:46:27.404" endtime="20230922 12:46:27.760"/>
+</kw>
+<kw name="Click" library="RPA.Windows">
+<arg>name:"Connect"</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<msg timestamp="20230922 12:46:27.761" level="INFO">Getting element with locator: name:"Connect"</msg>
+<msg timestamp="20230922 12:46:27.762" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000001F604580C10&gt;, locator='name:"Manufacturing Suite" and type:WindowControl', name='Manufacturing Suite', automation_id='', control_type='WindowControl', class_name='CONNECT', left=251, right=1681, top=45, bottom=1068, width=1430, height=1023, xcenter=966, ycenter=556)</msg>
+<msg timestamp="20230922 12:46:27.762" level="INFO">Locator 'name:"Connect"' produced matcher: MatchObject(locators=[('Name', 'Connect', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230922 12:46:27.790" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.ButtonControl object at 0x000001F604572450&gt;, locator='name:"Connect"', name='Connect', automation_id='', control_type='ButtonControl', class_name='QPushButton', left=1541, right=1661, top=999, bottom=1039, width=120, height=40, xcenter=1601, ycenter=1019)</msg>
+<status status="PASS" starttime="20230922 12:46:27.760" endtime="20230922 12:46:28.351"/>
+</kw>
+<status status="PASS" starttime="20230922 12:46:25.468" endtime="20230922 12:46:28.352"/>
+</kw>
+<kw name="Configure filter design conditions">
+<kw name="Control Window" library="RPA.Windows">
+<arg>name:"Manufacturing Suite"</arg>
+<tag>window</tag>
+<doc>Controls the window defined by the locator.</doc>
+<msg timestamp="20230922 12:46:28.356" level="INFO">Getting element with locator: name:"Manufacturing Suite" and type:WindowControl</msg>
+<msg timestamp="20230922 12:46:28.356" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x000001F604580790&gt;, locator='name:"Manufacturing Suite" and type:WindowControl', name='Desktop 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg timestamp="20230922 12:46:28.356" level="INFO">Locator 'name:"Manufacturing Suite" and type:WindowControl' produced matcher: MatchObject(locators=[('Name', 'Manufacturing Suite', 0), ('ControlType', 'WindowControl', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230922 12:46:29.488" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000001F604581710&gt;, locator='name:"Manufacturing Suite" and type:WindowControl', name='Manufacturing Suite', automation_id='Widget', control_type='WindowControl', class_name='Widget', left=251, right=1681, top=45, bottom=1069, width=1430, height=1024, xcenter=966, ycenter=557)</msg>
+<status status="PASS" starttime="20230922 12:46:28.353" endtime="20230922 12:46:29.992"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230922 12:46:34.993" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230922 12:46:29.993" endtime="20230922 12:46:34.993"/>
+</kw>
+<kw name="Maximize Window" library="RPA.Windows">
+<tag>window</tag>
+<doc>Maximize the current active window or the window defined
+by the locator.</doc>
+<status status="PASS" starttime="20230922 12:46:34.993" endtime="20230922 12:46:35.502"/>
+</kw>
+<kw name="Click" library="RPA.Windows">
+<arg>BoundingRectangle:"[l=2,t=669,r=396,b=764]"</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<msg timestamp="20230922 12:46:35.503" level="INFO">Getting element with locator: BoundingRectangle:"[l=2,t=669,r=396,b=764]"</msg>
+<msg timestamp="20230922 12:46:35.504" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x000001F604581710&gt;, locator='name:"Manufacturing Suite" and type:WindowControl', name='Manufacturing Suite', automation_id='Widget', control_type='WindowControl', class_name='Widget', left=251, right=1681, top=45, bottom=1069, width=1430, height=1024, xcenter=966, ycenter=557)</msg>
+<msg timestamp="20230922 12:46:35.504" level="WARN">Invalid locator strategy 'BoundingRectangle'! (assuming 'name')</msg>
+<msg timestamp="20230922 12:46:35.506" level="INFO">Locator 'BoundingRectangle:"[l=2,t=669,r=396,b=764]"' produced matcher: MatchObject(locators=[('Name', 'BoundingRectangle:"[l=2,t=669,r=396,b=764]', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230922 12:46:45.822" level="INFO">2023-09-22 12:46:45.820 locators.py[274] _get_control_from_params -&gt; Find Control Timeout(10s): {Name: 'BoundingRectangle:"[l=2,t=669,r=396,b=764]'}</msg>
+<msg timestamp="20230922 12:46:45.823" level="FAIL">ElementNotFound: Element not found with locator 'BoundingRectangle:"[l=2,t=669,r=396,b=764]"'</msg>
+<status status="FAIL" starttime="20230922 12:46:35.502" endtime="20230922 12:46:45.828"/>
+</kw>
+<status status="FAIL" starttime="20230922 12:46:28.353" endtime="20230922 12:46:45.829"/>
+</kw>
+<status status="FAIL" starttime="20230922 12:46:13.025" endtime="20230922 12:46:45.830">ElementNotFound: Element not found with locator 'BoundingRectangle:"[l=2,t=669,r=396,b=764]"'</status>
+</test>
+<status status="FAIL" starttime="20230922 12:46:12.088" endtime="20230922 12:46:45.833"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Eaton">Eaton</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230922 12:46:12.838" level="WARN">C:\Users\Administrator\PycharmProjects\WindowsAutomation\venv\Lib\site-packages\RPA\Desktop\Windows.py:216: FutureWarning: `RPA.Desktop.Windows` got deprecated and will be no longer maintained, please use `RPA.Windows` instead (https://robocorp.com/docs/libraries/rpa-framework/rpa-windows)
+  deprecation(
+</msg>
+<msg timestamp="20230922 12:46:35.504" level="WARN">Invalid locator strategy 'BoundingRectangle'! (assuming 'name')</msg>
+</errors>
+</robot>
